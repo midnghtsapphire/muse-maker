@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { AudioWaveform } from "./AudioWaveform";
 import { motion } from "framer-motion";
 import { Play, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
   return (
@@ -61,10 +62,12 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
           >
-            <Button variant="hero" size="xl">
-              <Sparkles className="w-5 h-5" />
-              Start Creating Free
-            </Button>
+            <Link to="/create">
+              <Button variant="hero" size="xl">
+                <Sparkles className="w-5 h-5" />
+                Start Creating Free
+              </Button>
+            </Link>
             <Button variant="heroOutline" size="xl">
               <Play className="w-5 h-5" />
               Watch Demo
